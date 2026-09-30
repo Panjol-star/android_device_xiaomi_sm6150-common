@@ -54,7 +54,14 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libvolumelistener
+    libvolumelistener \
+    libdownmix \
+    libaudiopreprocessing \
+    libasphere \
+    libreverbwrapper \
+    libbundlewrapper \
+    libldnhncr \
+    libdynproc
 
 PRODUCT_PACKAGES += \
     libaudio-resampler
