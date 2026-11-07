@@ -175,6 +175,9 @@ persist.sys.sf.color_mode=9
 # FRP
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
+# Game FrameRate
+debug.graphics.game_default_frame_rate.disabled=true
+
 # IMS
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
