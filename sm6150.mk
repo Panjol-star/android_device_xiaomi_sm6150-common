@@ -31,6 +31,9 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 # Inherit from Dolby
 $(call inherit-product, hardware/dolby/dolby.mk)
 
+PRODUCT_PACKAGES += \
+    DSPVolumeSynchronizer
+
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
