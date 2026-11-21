@@ -1,0 +1,2 @@
+# DUCK RKP
+/(vendor|system/vendor)/bin/duck_rkp                                 u:object_r:duck_rkp_exec:s0

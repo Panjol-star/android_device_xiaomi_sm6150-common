@@ -128,8 +128,12 @@ PRODUCT_COPY_FILES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm-service.clearkey \
+    android.hardware.drm-service.clearkey
+
+ifeq ($(DEVICE_USE_DUCK_RKP),true)
+PRODUCT_PACKAGES += \
     duck_rkp
+endif
 
 # Fastbootd
 PRODUCT_PACKAGES += \

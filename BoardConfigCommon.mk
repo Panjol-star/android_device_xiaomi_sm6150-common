@@ -52,9 +52,15 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-    $(COMMON_PATH)/configs/hidl/compatibility_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml
+
+ifeq ($(DEVICE_USE_DUCK_RKP),true)
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
+    $(COMMON_PATH)/duck_rkp/compatibility_matrix_duck_rkp.xml
+BOARD_VENDOR_SEPOLICY_DIRS += \
+    $(COMMON_PATH)/sepolicy/duck_rkp
+endif
 
 DEVICE_MANIFEST_FILE += $(COMMON_PATH)/configs/hidl/manifest.xml \
     hardware/qcom-caf/sm8150/media/conf_files/sm6150/c2_manifest.xml
